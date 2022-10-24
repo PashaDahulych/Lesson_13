@@ -1,0 +1,206 @@
+@font-face {
+   font-family: "TarnationSans";
+   src: url("../fonts/TarnationSans-Regular.woff2") format("woff2"), url("../fonts/TarnationSans-Regular.woff") format("woff");
+   font-display: swap;
+   font-weight: 400;
+   font-style: normal;
+}
+body{
+   font-family: "Lato", sans-serif;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 1.2;
+}
+[class*="__container"]{
+   max-width: 1240px;
+   margin: 0 auto;
+}
+.wrapper{
+   overflow: hidden;
+   position: relative;
+   min-height: 100%;
+   padding: 40px;
+}
+.header__container{
+   margin-bottom: 30px;
+}
+h1{
+   font-family: "TarnationSans", sans-serif;
+   font-size: 30px;
+   line-height: 1.5;
+   color: red;
+   text-transform: uppercase;
+   position: absolute;
+   left: 50%;
+   top: 1.5%;
+   transform: translate(-50%, 0px);
+   display: inline-block;
+   padding-left: 35px;
+}
+h1:hover{
+   color: darkblue;
+   text-decoration: underline;
+   transition-property: all;
+   transition-duration: 1s;
+   transition-delay: 0s;
+   transition-timing-function: linear;
+}
+h1::before{
+   content: "";
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   top: 5px;
+   margin-left: -35px;
+   margin-right: 10px;
+   background-color: #ff0000;
+   animation-name: link-rotate;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
+@keyframes link-rotate {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
+h1:hover::before {
+   animation-play-state: paused;
+}
+.main__container{   
+   position: relative;
+   width: 1240px;
+   height: 950px;
+   background: url("../img/halloween-background-png.jpeg") 0 0 / 1240px 950px no-repeat;
+   overflow: hidden;
+}
+.main__vigyma {
+   position: absolute;
+   top: 30%;
+   right: 40%;
+   width: 100px;
+   height: 100px;
+   z-index: 3;
+   background: url("../img/vidyma_witch-removebg-preview.png") 0 0 / 100px 100px no-repeat;
+   animation: vigyma 10s linear normal forwards;
+}
+@keyframes vigyma{
+   0% {
+      transform: translate(-200%, -100%) scale(0);
+   }
+   30% {
+      transform: translate(0, 0) scale(1);
+   }
+   80% {
+      transform: translate(0, 0) scale(1);
+   }
+   100% {
+      transform: translate(-200%, -100%) scale(0);
+   }
+}
+.main__vigyma:hover {
+   animation-play-state: paused;
+}
+.main__goast {
+   position: absolute;
+   top: 60%;
+   left: 40%;
+   width: 200px;
+   height: 200px;
+   background: url("../img/halloween-ghost-removebg-preview.png") 0 0 / 200px 200px no-repeat;
+   animation: goast 7s linear normal forwards;
+}
+
+@keyframes goast{
+   0% {
+      transform: translate(400%, 0px);
+   }
+   50% {
+      transform: translate(0, 0);
+      opacity: 1;
+   }
+   80% {
+         transform: translate(0, 0);
+         opacity: 1;
+      }
+   100% {
+      transform: translate(-800%, 0);
+      opacity: 0;
+   }
+}
+.main__scooby {
+   position: absolute;
+   top: 75%;
+   left: 10%;
+   width: 200px;
+   height: 200px;
+   z-index: 5;
+   background: url("../img/scooby-doo-removebg-preview.png") 0 0 / 200px 200px no-repeat;
+   animation-name: scooby;
+   animation-duration: 2s;
+   animation-fill-mode: forwards;
+   animation-delay: 3s;
+   animation-timing-function: linear;
+   
+}
+@keyframes scooby{
+   0% { 
+      opacity: 1;
+   }
+   100% {
+      transform: translate(-150%, 0px);
+   }
+   
+}
+
+.main__happy-halloween {
+   position: absolute;
+   width: 500px;
+   height: 300px;
+   left: 30%;
+   opacity: 0;
+   z-index: 6;
+   background: url("../img/images-removebg-preview.png") 0 0 / 500px 300px no-repeat;
+   animation: happy 4s linear 4s forwards;
+}
+@keyframes happy{
+   0% {
+      transform: scale(0);
+      opacity: 0;
+   }
+
+   100% {
+      transform: scale(0.8);
+      opacity: 1;
+   }
+}
+
+.main__mummy {
+   position: absolute;
+   bottom: 5%;
+   right: 20%;
+   width: 100px;
+   height: 200px;
+   z-index: 4;
+   background: url("../img/halloween-mummy.png") 0 0 / 100px 200px no-repeat;
+   animation: mummy 7s linear forwards ;
+}
+@keyframes mummy{
+   0% {
+      transform: translate(400%, 0px);
+   }
+   40% {
+      transform: translate(0px, 0px);
+   }
+   60% {
+         transform: translate(0px, 0px);
+      }
+   100% {
+      transform: translate(-1000%, 0px);
+   }
+}
